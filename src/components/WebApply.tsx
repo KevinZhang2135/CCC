@@ -1,6 +1,6 @@
 import React from "react"
 
-// (eligibility, process, timeline, cost), form button
+// (Eligibility, process, timeline, cost), form button
 export default function WebApply() {
     return (
         <div>
