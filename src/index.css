@@ -1,3 +1,4 @@
+@import url('/fonts/inter.css');
 @import "tailwindcss";
 
 @tailwind base;
@@ -31,7 +32,14 @@
 :root {
   min-width: 320px;
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "calt", "ss03", "cv02", "cv05", "cv11";
 }
 
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "InterVariable", sans-serif;
+  }
+}
 @layer components {
 }
