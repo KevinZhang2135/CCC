@@ -11,12 +11,18 @@ export default function Contact() {
       <span>
         Have any questions? Reach out to us at
         <br />
-        <a className="font-bold" href="mailto:campuscoderscrew@gmail.com">
+        <a
+          className="font-bold transition duration-300 hover:text-ocean-light"
+          href="mailto:campuscoderscrew@gmail.com"
+        >
           campuscoderscrew@gmail.com
         </a>
       </span>
 
-      <div className="flex gap-4 **:size-10 **:stroke-ocean-dark">
+      <div
+        className="flex gap-4 **:size-10 text-ocean-dark
+        *:transition *:duration-300 *:hover:text-ocean-light"
+      >
         <a href="https://www.instagram.com/umdccc/">
           <FaInstagram />
         </a>

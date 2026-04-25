@@ -1,4 +1,3 @@
-import React from "react";
 import Accordion from "./Accordion";
 
 // Drop down 6 questions
@@ -60,13 +59,13 @@ export default function FAQ() {
 
   return (
     <div
-      className="flex flex-col gap-4 items-center 
+      className="px-4 flex flex-col gap-4 items-center 
         text-base text-ocean-dark"
     >
       <h3 className="text-xl text-center font-bold">
         Frequently Asked Questions
       </h3>
-      <div className="max-w-250 w-full px-8">
+      <div className="max-w-250 w-full">
         <Accordion labels={questions} content={answers} />
       </div>
     </div>

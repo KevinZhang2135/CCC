@@ -15,7 +15,18 @@
   --color-sand-dark: hsl(47, 60%, 90%);
 
   --breakpoint-xs: 30rem;
+
+  --animate-slow-spin: slow-spin 60s linear infinite;
+  @keyframes slow-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 }
+
 
 :root {
   min-width: 320px;
