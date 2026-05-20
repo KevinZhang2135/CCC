@@ -1,18 +1,22 @@
 import React from "react";
 
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Events from "../components/Events";
-import WebApply from "../components/WebApply";
-import Join from "../components/Join";
-import FAQ from "../components/FAQ";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import "../index.css"
+
+// import HeroNavBar from "../components/HomePage/HeroNavbar";
+import Hero from "../components/HomePage/Hero";
+import Events from "../components/HomePage/Events";
+import WebApply from "../components/HomePage/WebApply";
+import Join from "../components/HomePage/Join";
+import FAQ from "../components/HomePage/FAQ";
+import Contact from "../components/HomePage/Contact";
+import Footer from "../components/HomePage/Footer";
+import NavBar from "../components/NavBar";
 
 export default function Home() {
   return (
     <div className="relative flex flex-col">
-      <Navbar />
+      {/** <HeroNavbar />*/}
+      <NavBar/>
       <Hero />
       <Events />
       <WebApply />
