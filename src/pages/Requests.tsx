@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar";
 import ContactFooter from "../components/ContactFooter";
 
-import { Waves } from "../components/Icons";
+import { Waves1, Waves2 } from "../components/Icons";
 import Accordion from "../components/Accordion";
 
 const questions = [
@@ -121,19 +121,19 @@ export default function Requests() {
 
         {/* TODO: Add new theme color #09578A */}
         <div
-          className="z-2 w-full p-8
+          className="z-10 w-full p-8
             flex flex-col gap-2 items-center  
-            bg-[#09578A] rounded-3xl text-sand-light"
+            bg-[#09578A] rounded-3xl text-sand-light text-center"
         >
           <h2 className="text-2xl">Want a Website?</h2>
           <span className="font-light">
             Please fill out the form below, and we'll reach out!
           </span>
           <a
-            className="mt-4 px-12 p-4 bg-sand-light rounded-lg
+            className="mt-4 px-12 py-4 bg-sand-light rounded-lg
               text-ocean-dark font-semibold text-center
-              transition duration-300 hover:bg-[#09578A] 
-              hover:outline-2 hover:outline-sand-light hover:text-sand-light"
+              transition duration-300 hover:bg-transparent
+              hover:outline-2 hover:text-sand-light"
             href="https://go.umd.edu/CCC-website-request"
           >
             Request Form
@@ -141,29 +141,43 @@ export default function Requests() {
         </div>
       </div>
 
-      <Waves
-        className="z-1 w-full h-48 -my-24
-        bg-transparent -scale-x-100 fill-rose-500/10"
-      />
+      <Waves1 className="w-full h-48 -my-24 -scale-x-100 bg-transparent fill-white" />
 
       {/* TODO: Add new theme color #BAEBF8 */}
       {/* "Want to Join" Section */}
+      {/* `-mt-48` and `pt-48` must match the height of the wave graphic above */}
       <div
-        className="-mt-48 pt-48 flex flex-col items-center 
-          bg-linear-to-b from-amber-500 to-[#BAEBF8]"
+        className="-mt-48 pt-48 -mb-[20%] 
+          bg-linear-to-b from-white to-[#BAEBF8] to-70%"
       >
-        <div className="p-16 space-y-16 text-ocean-dark">
-          <div className="space-y-4 text-center">
+        <div
+          className="mx-8 mt-16 
+            flex flex-col items-center gap-16 text-ocean-dark"
+        >
+          <div className="flex flex-col gap-4 text-center">
             <h2 className="text-4xl font-bold">Want to Join?</h2>
-            <p className="text-base">
+            <p className="max-w-200 self-center text-base text-pretty">
               If you're interested in becoming part of <b>Campus Coders Crew</b>
               , please fill out one of the forms below!
             </p>
 
-            <div></div>
+            <div
+              className="flex max-xs:flex-col justify-center gap-4 xs:gap-8
+                *:px-12 *:py-4 *:bg-ocean-light *:rounded-lg 
+                *:text-sand-light *:font-bold
+                *:transition *:duration-300 *:hover:bg-transparent
+                *:hover:outline-2 *:hover:text-ocean-light"
+            >
+              <a href="https://go.umd.edu/ccc-developer-interest">
+                Join a Dev Team
+              </a>
+              <a href="https://go.umd.edu/ccc-committees-interest">
+                Join a Committee
+              </a>
+            </div>
           </div>
 
-          <div className="z-1 max-w-250 px-4 space-y-8">
+          <div className="z-30 max-w-250 space-y-8">
             <h3 className="text-2xl font-bold text-center">
               Frequently Asked Questions
             </h3>
@@ -172,13 +186,39 @@ export default function Requests() {
         </div>
       </div>
 
-      <Waves className="w-full h-96 bg-transparent -scale-x-100 fill-[#BAEBF8]" />
+      <Waves2
+        className="relative z-20 w-full h-96 
+          bg-transparent fill-[#BAEBF8]"
+      />
+      <Waves1
+        className="relative z-10 w-full h-96 -mt-48 
+          bg-transparent fill-sky-light"
+      />
 
       {/* Contacts */}
-      <ContactFooter
-        className="py-8 bg-sand-light text-ocean-dark
+      {/* `-mt-48` and `pt-48` must match the height of the wave graphic above */}
+      <div className="relative -mt-48 pt-48 bg-sand-light">
+        {/* Grainy sand noise */}
+        <svg
+          className="absolute z-0 inset-0 size-full 
+            grayscale brightness-150 constrast-120 mix-blend-multiply"
+        >
+          <filter id="noiseFilter">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.5"
+              numOctaves="1"
+              stitchTiles="stitch"
+            />
+          </filter>
+
+          <rect className="size-full" filter="url(#noiseFilter)" />
+        </svg>
+        <ContactFooter
+          className="relative z-10 px-8 py-8 text-ocean-dark
           [&_a]:transition [&_a]:duration-300 [&_a]:hover:text-ocean-light"
-      />
+        />
+      </div>
     </>
   );
 }

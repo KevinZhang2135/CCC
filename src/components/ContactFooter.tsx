@@ -13,7 +13,7 @@ export default function ContactFooter({ className }: { className?: string }) {
         className="flex flex-col gap-4 items-center 
           text-base text-center"
       >
-        <h2 className="text-2xl font-bold">Contact Us</h2>
+        <h2 className="text-4xl font-bold">Contact Us</h2>
         <span>
           Have any questions? Reach out to us at
           <br />

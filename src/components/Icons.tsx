@@ -1,5 +1,9 @@
 const ShipWheel = ({ className }: { className?: string }) => (
-  <svg className={className} xmlns="http://w3.org" viewBox="0 0 24 24">
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="m2 11l2.05.1a7.96 7.96 0 0 1 3.2-5.54L6.13 3.84c-.27-.48-.13-1.09
         .37-1.37c.5-.27 1.09-.11 1.37.37l.93 1.82a8.1 8.1 0 0 1 6.4 0l.93-1.82
@@ -20,12 +24,13 @@ const ShipWheel = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const Waves = ({ className }: { className?: string }) => {
+const Waves1 = ({ className }: { className?: string }) => {
   return (
     <svg
       className={className}
       preserveAspectRatio="none"
       viewBox="0 0 4689 1320"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M-6.898 1085.72V0H4688.1v998.502c-105.04-83.116-587-279-1937 
@@ -35,4 +40,21 @@ const Waves = ({ className }: { className?: string }) => {
   );
 };
 
-export { ShipWheel, Waves };
+const Waves2 = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      className={className}
+      preserveAspectRatio="none"
+      viewBox="0 0 4688 1227"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2288.57 1189.52C3076.57 1288.02 3828.07 1189.52 4688.01 
+          864.97L4688 -0.00012207L-7.00098 -0.00012207V684.515C921.57 463.017 
+          1500.57 1091.01 2288.57 1189.52Z"
+      />
+    </svg>
+  );
+};
+
+export { ShipWheel, Waves1, Waves2 };
